@@ -12,7 +12,7 @@ orderNumberField.innerText = orderNumber;
 answerField.innerText = `Вы загадали число ${answerNumber }?`;
 
 document.getElementById('btnRetry').addEventListener('click', function () {
-    if (gameRun) {
+    if (!gameRun) {
         let minValue = parseInt(prompt('Минимальное знание числа для игры','0'));
         let maxValue = parseInt(prompt('Максимальное знание числа для игры','100'));
         alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
